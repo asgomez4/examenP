@@ -25,4 +25,22 @@ public class Operaciones {
    public int resta(){
        return num1 - num2;
    }
+   /**
+    * metodo que devuelve la multiplicacion entre dos numeros
+    * @return multiplicacion
+    */
+   public int multiplicacion(){
+       return num1 * num2;
+   }
+   
+   /**
+    * metodo que devuelve la division entre dos numeros
+    * @return division entre numeros
+    */
+   public int division(){
+       if (num2<0){
+         System.out.println("Ingrese denominador positivo");
+       }
+       return num1 / num2;      
+   }
 }
