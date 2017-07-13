@@ -29,29 +29,17 @@ public class Starter {
 	//OperacionesFloat ope;
         Scanner entrada = new Scanner(System.in);
         /*Menu Principal*/
-        System.out.println("Seleccione el tipo de dato:");
-        System.out.println("1.- Enteros");
-	System.out.println("2.- Flotantes");
-        seleccion=entrada.nextInt();
-	if(seleccion == 1){
-		System.out.println("Ingrese numero 1: ");
+        System.out.println("Ingrese numero 1: ");
         	num1=entrada.nextInt();
         	System.out.println("Ingrese numero 2: ");
         	num2=entrada.nextInt();
-	}else{
-		System.out.println("Ingrese numero 1: ");
-        	num3=entrada.nextFloat();
-        	System.out.println("Ingrese numero 2: ");
-        	num4=entrada.nextFloat();
-	}        
-        System.out.println("Seleccione la operacion: ");
+	System.out.println("Seleccione la operacion: ");
         System.out.println("1.- Suma");
         System.out.println("2.- Resta");
         System.out.println("3.- Multiplicacion");
         System.out.println("4.- Division");
         operacion=entrada.nextInt();
-	if(seleccion==1){
-        	obj = new Operaciones(num1,num2);
+	obj = new Operaciones(num1,num2);
         	if(operacion == 1){            
            		resultado = obj.suma();
         	}else if(operacion == 2){
@@ -61,18 +49,6 @@ public class Starter {
         	}else{
             		resultado = obj.division();
         	}
-	}else{
-        	/*ope = new OperacionesFloat(num1,num2);
-        	if(operacion == 1){            
-           		resultado = ope.suma();
-        	}else if(operacion == 2){
-	            	resultado = ope.resta();
-        	}else if(operacion == 3){
-        	    	resultado = ope.multiplicacion();
-        	}else{
-            		resultado = ope.divisio();
-        	}*/
-	}
         System.out.println("El resultado es:" + String.valueOf(resultado));
     }    
 }
