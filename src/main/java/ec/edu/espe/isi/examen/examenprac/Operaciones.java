@@ -12,6 +12,7 @@ package ec.edu.espe.isi.examen.examenprac;
 public class Operaciones {    
     private int num1;
     private int num2;
+    private int resultado;
 
     public Operaciones(int num1, int num2) {
         this.num1 = num1;
@@ -43,4 +44,30 @@ public class Operaciones {
        }
        return num1 / num2;      
    }
+   
+  /**
+    * metodo que devuelve la potencia n de un numero entero
+    * @return resultado de la potencia 
+    */
+public int potencia(){
+
+       
+       if (num2>0){
+          resultado = (int) Math.pow(num1, num2);
+       }
+        else{
+
+            System.out.println("Ingrese una potencia positiva");
+        }
+    return resultado;
 }
+
+ /**
+    * metodo que devuelve la el mod de dos numeros
+    * @return mod entre numeros
+    */
+
+    public int modulo(){
+        return num1%num2;
+    } 
+    }
