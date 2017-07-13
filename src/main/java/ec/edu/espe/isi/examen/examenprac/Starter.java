@@ -5,6 +5,8 @@
  */
 package ec.edu.espe.isi.examen.examenprac;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Sofia Gomez
@@ -16,6 +18,37 @@ public class Starter {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-    }
-    
+        int num1 = 0; 
+        int num2 = 0;
+        float num3 = 0;
+        float num4 = 0;
+	int seleccion;
+        int operacion;
+        int resultado = 0;
+        Operaciones obj;
+	//OperacionesFloat ope;
+        Scanner entrada = new Scanner(System.in);
+        /*Menu Principal*/
+        System.out.println("Ingrese numero 1: ");
+        	num1=entrada.nextInt();
+        	System.out.println("Ingrese numero 2: ");
+        	num2=entrada.nextInt();
+	System.out.println("Seleccione la operacion: ");
+        System.out.println("1.- Suma");
+        System.out.println("2.- Resta");
+        System.out.println("3.- Multiplicacion");
+        System.out.println("4.- Division");
+        operacion=entrada.nextInt();
+	obj = new Operaciones(num1,num2);
+        	if(operacion == 1){            
+           		resultado = obj.suma();
+        	}else if(operacion == 2){
+	            	resultado = obj.resta();
+        	}else if(operacion == 3){
+        	    	resultado = obj.multiplicacion();
+        	}else{
+            		resultado = obj.division();
+        	}
+        System.out.println("El resultado es:" + String.valueOf(resultado));
+    }    
 }
