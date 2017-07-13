@@ -25,8 +25,9 @@ public class Starter {
 	int seleccion;
         int operacion;
         int resultado = 0;
+        float resul = 0;
         Operaciones obj;
-	//OperacionesFloat ope;
+	OperacionesFloat ope;
         Scanner entrada = new Scanner(System.in);
         /*Menu Principal*/
         System.out.println("Seleccione el tipo de dato:");
@@ -62,16 +63,16 @@ public class Starter {
             		resultado = obj.division();
         	}
 	}else{
-        	/*ope = new OperacionesFloat(num1,num2);
+        	ope = new OperacionesFloat(num1,num2);
         	if(operacion == 1){            
-           		resultado = ope.suma();
+           		resul = ope.suma();
         	}else if(operacion == 2){
-	            	resultado = ope.resta();
+	            	resul = ope.resta();
         	}else if(operacion == 3){
-        	    	resultado = ope.multiplicacion();
+        	    	resul = ope.multiplicacion();
         	}else{
-            		resultado = ope.divisio();
-        	}*/
+            		resul = ope.division();
+        	}
 	}
         System.out.println("El resultado es:" + String.valueOf(resultado));
     }    
