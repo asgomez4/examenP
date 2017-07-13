@@ -17,11 +17,17 @@ public class Operaciones {
         this.num1 = num1;
         this.num2 = num2;
     }
-    
+    /**
+     * Funcion que realiza la suma de dos números
+     * @return devuelve el resultado de la suma
+     */
    public int suma(){
        return num1 + num2;
    }
-   
+   /**
+    * Funcion que realiza la resta de dos números
+    * @return devuelve el resultado de la resta
+    */
    public int resta(){
        return num1 - num2;
    }
